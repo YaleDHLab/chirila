@@ -1,0 +1,54 @@
+{
+  "0": {
+    "question": "What does CHIRILA stand for?",
+    "answer": "CHIRILA stands for <b>C<\/b>ontemporary and <b>Hi<\/b>storical <b>R<\/b>econstruction in the <b>I<\/b>ndigenous <b>La<\/b>nguages of Australia."
+  },
+  "1": {
+    "question": "Why that name?",
+    "answer": "The name is based on the word <em>tyirilya<\/em>, a widespread term for &#8216;<a href=\"https:\/\/en.wikipedia.org\/wiki\/Echidna\" target=\"_blank\">echidna<\/a>&#8216; in the languages of Australia&#8217;s Western Desert Region. We wanted an acronym that describes the database, that relates to the languages we are working with, and that is pronounceable for English speakers."
+  },
+  "2": {
+    "question": "What&#8217;s in the CHIRILA database?",
+    "answer": "The database is a lexical database (a database with words from different languages). Currently there are about 780,000 words, from all over Australia. The publicly available portion of the database, at present, is considerably smaller, representing the materials that we have received explicit permission to release."
+  },
+  "3": {
+    "question": "What&#8217;s in the CHIRILA database?",
+    "answer": "The database is a lexical database (a database with words from different languages). Currently there are about 780,000 words, from all over Australia. The publicly available portion of the database, at present, is considerably smaller, representing the materials that we have received explicit permission to release.<br\/><br\/>I am including published language materials, and other materials which are freely available (for example, on unrestricted view through the archive at AIATSIS in Canberra). As part of doing this, I have been looking at old sources \u2013 that is, materials published in the 19<sup>th<\/sup> century \u2013 other published materials, and fieldnotes. We (my students and I) have been typing these materials into the computer and making a database program."
+  },
+  "4": {
+    "question": "How will this database be useful to Aboriginal people?",
+    "answer": "There are a couple of ways that this project might be useful to Aboriginal and Torres Strait Islander groups. If you are working on reviving your language and looking for materials, there might be some words from your language in the database. If your language was mostly written down a while ago, sometimes it can be hard to know exactly how words should be said. Sometimes we can work out what the right pronunciation is through looking at other languages. The database is digital, which means it is easy to produce word lists for individual languages. My team and I can help in making language materials like wordlist books, which could be the start of a dictionary. Please drop us a line if we can help with your program."
+  },
+  "5": {
+    "question": "Can I download data from the database?",
+    "answer": "Yes! You can download the portions of the database; those lists for which we have received permission from the authors and\/or communities to distribute data. We will be continuing to contact people and to prepare data for future releases. Please also see the acknowledgments. At present, it\u2019s a bit under 20% of the total data holdings. I expect that to change over the next year or so.<br\/><br\/>You can download the publicly available part of the dataset <a href=\"#INSERT HERE\">here<\/a> or by clicking the download button in the left navigation"
+  },
+  "6": {
+    "question": "How do I cite Chirila?",
+    "answer": "Citing Chirila data involves citing both the database and the sources underlying the database. To cite Chirila in academic publications, please cite the paper that describes the database:<br\/><br\/>Bowern, Claire (2016). Chirila: Contemporary and Historical Resources for the Indigenous Languages of Australia. <em>Language Documentation and Conservation. <\/em>Vol 10<em>. <\/em>http:\/\/nflrc.hawaii.edu\/ldc\/<br\/><br\/>You can also reference the database itself: INSERT HERE, version 1.0, February, 2017.<br\/><br\/>To cite the underlying database sources, please use the shortcode key field in the database to reference the data in that source."
+  },
+  "7": {
+    "question": "Contributing to CHIRILA",
+    "answer": "We accept data contributions of all types relating to the languages of Australia. You can <a href=\"http:\/\/www.pamanyungan.net\/chirila\/contribute-data-to-chirila\/\">upload files<\/a> directly to our site. The more data we have in the database, the more generally useful it will be. We would like, eventually, to have a database that contains words from all the Aboriginal and Torres Strait Islander languages in Australia. There are some parts of the country where we don\u2019t have much information at the moment. These include:<ul> <li> Cape York Peninsula <\/li> <li> Western Arnhem Land and Central Top End <\/li> <li> Southwest Western Australia <\/li> <\/ul>We\u2019d be particularly interested in getting in contact with researchers and communities from these regions."
+  },
+  "8": {
+    "question": "Why can\u2019t I see data for my language?",
+    "answer": "The first release of the data contains about 150,000 records. This is less than 20% of the data in the full database. So, if there isn\u2019t any material for your language in Chirila yet, there might be several reasons:<ul> <li>It might be included in Phase II release (in mid-2016); languages in this group currently include Dieri (Diyari), Iwaidja, Kurtjar and Duu\u014bidjawu.<\/li> <li>I don&#8217;t have any data for that language (yet) in the database. This is particularly likely for languages of the Cape York and Central Arnhem Land region. If you know of a data source that I could use, please let me know, or even better, send it to me!<\/li> <li>It could be that I have data, but it&#8217;s not processed yet. It&#8217;s a little harder to give a full list of languages for this, but it includes Mawng, Wambaya, Iwaidja, Anjumarla and Tiwi. If you would like one of these languages prioritized, please let me know and we&#8217;ll try our best to include it in the next release. I&#8217;ll put up a list of sources which we want to prioritize <a href=\"http:\/\/www.pamanyungan.net\/chirila\/chirila-phase-ii-priority-sources\/\">here<\/a>.<\/li> <li>I have data, it&#8217;s processed, but I haven&#8217;t (yet) received permission to release it, because I haven&#8217;t been able to contact the right holders (or they haven&#8217;t yet got back to me, or because they needed to contact others).<\/li> <li>The final group is a small number of languages where the rights holders did not give me permission to release any data. This is a very small group compared to the others, almost everyone that I have been able to contact has been enthusiastic about having their data included.<\/li> <\/ul>"
+  },
+  "9": {
+    "question": "Who is developing the database?",
+    "answer": "The main developer is <a href=\"http:\/\/campuspress.yale.edu\/clairebowern\" target=\"_blank\">Claire Bowern<\/a>, Associate Professor of <a href=\"http:\/\/ling.yale.edu\">Linguistics<\/a> at <a href=\"http:\/\/yale.edu\" target=\"_blank\">Yale University<\/a>.<br> <br> This website is developed and maintained by <a href=\"http:\/\/www.linkedin.com\/in\/abhinayar\">Abhi Nayar<\/a>, Yale College, Class of 2018."
+  },
+  "10": {
+    "question": "Who funds it?",
+    "answer": "We gratefully acknowledge support from the USA&#8217;s <em><a href=\"http:\/\/nsf.gov\" target=\"_blank\">National Science Foundation<\/a> <\/em>through grants BCS-0844550 and BCS-1423711. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation."
+  },
+  "11": {
+    "question": "Why can\u2019t I download all the data?",
+    "answer": "Because we don\u2019t have permission from the authors and\/or language communities to release all of it (yet). Different people have different opinions about how accessible information about their language and research should be. We cannot accommodate all views (given that those views range from all Aboriginal materials should be freely available, to no one who is not from that particular group should have access). The vast majority of Aboriginal people from around Australia that I have talked to about the project felt that the decisions should rest with communities, and that in general, as long as appropriate respect for the language is shown, that it\u2019s ok for others to learn about those languages too."
+  },
+  "12": {
+    "question": "Click here to be taken to the <a href=\"download\"> terms of use, registration, and data download<\/a>.",
+    "answer": ""
+  }
+}

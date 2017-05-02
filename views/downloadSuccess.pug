@@ -1,0 +1,10 @@
+extends base
+block content
+  a#downloadData(href="/files/FullChirilaDataset.csv", style="display: none")
+  script(type="text/javascript").
+    var l = document.getElementById("downloadData");
+    l.click();
+    setTimeout(function(){
+        window.location.replace("/");
+    }, 1000);
+    

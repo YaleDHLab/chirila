@@ -1,0 +1,98 @@
+extends base
+block content
+  div.container
+    div.map-wrapper
+      div#subMap
+    div.language-information-container
+      div.half-box.lang-info
+        div.lang-info-content.content
+          h4 Language Information
+          hr
+          - var item = data[0]
+          span.section
+            span.section-title Subgroup:
+            span.subgroup= item.Subgroup
+          br
+          span.section
+            span.section-title Family:
+            span.family= item.Family
+          br
+          span.section
+            span.section-title ISO Code (639):
+            span.iso639= item.ISO639
+          br
+          span.section
+            span.section-title Glottolog ID:
+            span.glottocode= item.Glottolog_ID
+          br
+          span.section
+            span.section-title AIATSIS Code:
+            span.aiatsis= item.AIATSIS_Code
+          br
+          span.section
+            span.section-title Variety:
+            span.variety= item.Variety
+      div.half-box.ext-links
+        div.ext-links-content.content
+          h4 Links
+          hr
+          div.link-wrapper
+            a.glottolog-link(href= "http://glottolog.org/resource/languoid/id/" + item.Glottolog_ID) Glottolog
+            a.wikipedia-link(href= "https://en.wikipedia.org/wiki/" + item.StdLanguageName) Wikipedia
+            a.ethnologue-link(href= "https://www.ethnologue.com/language/" + item.ISO639) Ethnologue
+            a.endangeredlanguages-link(href= "http://endangeredlanguages.com/lang/search/#/?endangerment=U,S,AR,V,T,E,CE,SE,AW,D&sample_types=N,A,V,D,I,G,L&locations=known,unknown&q=" + item.StdLanguageName + "&type=code") Endangered Languages
+            a.olac-link(href= "http://www.language-archives.org/language/" + item.ISO639) Olac Search
+            a.aiatsis-link(href= "http://austlang.aiatsis.gov.au/main.php?code=" + item.AIATSIS_Code) AIATSIS
+            a.googlescholar-link(href= "https://scholar.google.com/scholar?q=" + item.StdLanguageName + "+language&btnG=&hl=en&as_sdt=0%2C7") Google Scholar
+    div#lang-word-table
+      div.search-sort
+        input.search(placeholder="Auto-Search")
+        div.sort-wrapper
+          | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sort By:
+          button.sort.sort-word(data-sort="word") Word
+          button.sort.sort-phonetic(data-sort="phonetic-form") Phonetic Form
+          button.sort.sort-gloss(data-sort="gloss") Gloss
+      table#language-specific-table
+        thead
+          th.word-title Word
+          th.phonetic-form Phonetic Form
+          th.gloss-title Gloss
+          th.source-title Source
+          th.error-title Report Error
+        tbody.list
+          for item in data
+            tr
+              td.word= item.OriginalForm
+              td.phonetic-form= item.PhonemicisedIPA
+              td.gloss= item.Std_Gloss
+              td.source= item.Author
+              td.error
+                a(href= "error/" + item.OriginalForm) Report
+  script(src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js" type="text/javascript")
+  script(type="text/javascript").
+    $(document).ready(function(){
+      function setTableSort() {
+           var options = {
+              valueNames: [ 'word', 'phonetic-form', 'gloss' ]
+          };
+          var userList = new List('lang-word-table', options);
+      }
+      setTableSort();
+    });
+                
+            
+          
+          
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      

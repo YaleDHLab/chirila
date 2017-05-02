@@ -1,0 +1,11 @@
+extends base
+block content
+  each item in indexFAQ
+    div.section
+      div.section-title
+        h5!= item.question
+      if item.answer != ""
+        hr.section-hr
+        div.section-content
+            p!= item.answer
+  

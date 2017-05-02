@@ -1,0 +1,40 @@
+extends base
+block content
+  div.word-table-wrapper
+    div#word-table
+     div.search-sort
+      input.search(placeholder="Auto-Search")
+      | &nbsp;&nbsp;&nbsp;Page:&nbsp;
+      select#pagination
+      | &nbsp;of 
+      span.total-pages
+      div.sort-wrapper
+        | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sort By:
+        button.sort.sort-word(data-sort="word") Word
+        button.sort.sort-lang(data-sort="langname") Phonetic Form
+        button.sort.sort-gloss(data-sort="og-gloss") Gloss
+      table#word-table-main
+        thead
+          for item in headerInfo
+            th.table-heading= item
+        tbody.list
+          //for item in data
+            tr
+              td.word= item.OriginalForm
+              td.phonetic-form= item.PhonemicisedIPA
+              td.og-gloss= item.OriginalGloss
+              td.langname= item.StdLanguageName
+              td.pos= item.OriginalPofSpeech
+              td.source= item.Author
+  script(src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js" type="text/javascript")
+  script(type="text/javascript" src="/js/wordsTable.js")
+  script(type="text/javascript").
+    $(document).ready(function(){
+      //get data from pug
+      var _globalData = !{JSON.stringify(data).replace(/<\//g, '<\\/')}
+      populateWordsTable(_globalData);
+      wordsTableSort();
+    });
+    
+     
+                

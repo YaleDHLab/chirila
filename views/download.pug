@@ -1,0 +1,32 @@
+extends base
+block content
+  div.section
+    div.section-content
+      h5.disclaimer You are welcome to use Chirila data in your own projects, or for your own language work, subject to the following conditions:
+      p
+        | -Use of the database and its derivatives is strictly non-commercial. This will not change under any circumstances.
+        br
+        br
+        | -You need to submit the form below to download data, so that I can let you know about future upgrades to the database. I am collecting information about user interest in the data because I need to be able to include in my annual reports  to the NSF what the project outcomes and broader impacts are; the best way to do that is to show what people are using the database for.
+        br
+        br
+        | -Researchers and communities shared data with me on the condition that it is acknowledged. I need end users of the data to also agree to those restrictions. In particular, you must acknowledge both the CHIRILA database (see 
+        a(href="http://www.pamanyungan.net/chirila/how-do-i-cite-chirila/") here
+        | &nbsp;how to do that) and the original source of the data  you are quoting. 
+        br
+        br
+        | -By using this data, you agree to let me know of any errors you find. The original importing of data into the database was tricky (to say the least) and errors no doubt remain. The best way to get a well-curated scholarly resource for Australian languages is for people to let me know when they come across issues, so that we can fix them for future releases.
+        br
+        br
+        | -If you need data in other formats for your research, please contact me. I may be able to produce a file in the format you need from the original (underlying) database more easily than you manipulating the output. If this requires substantial work on my part to achieve, I would ask to be included as a co-author on the resulting paper.
+    div.section.download
+      div.section-title
+        h5 Please submit this form to download ChirilaDB.
+      div.section-form.download-form
+        form(action="https://formspree.io/anayar2@gmail.com", method="POST")
+          input(type="text", name="name", placeholder="Full Name")
+          input(type="text", name="_replyto", placeholder="E-Mail Address")
+          input(type="text", name="institution", placeholder="Institution/Business")
+          input(type="hidden", name="_next", value="/downloadSuccess")
+          input(type="hidden", name="_subject", value="ChirilaDB Download Access Requested")
+          input(type="submit", value="Download", id="submit")
