@@ -644,21 +644,17 @@ h1, h1 a {
 }
 
 /* Downloads Page */
-#download .header-image {
-    background-image: url(../images/download/header.jpg);
-}
-
-#download .download-form {
+.download-form {
     margin-bottom: 60px;
     margin-top: 45px;
 }
 
-#download .section.download {
+.section.download {
     text-align: center;
     margin-top: 60px;
 }
 
-#download .download-form input {
+.download-form input, .download-form textarea {
     display: block;
     width: 480px;
     margin: 0 auto;
@@ -672,7 +668,13 @@ h1, h1 a {
     margin-bottom: 15px;
 }
 
-#download .download-form #submit {
+.download-form textarea {
+  height: 120px;
+  max-height: 240px;
+  padding-top: 10px;
+}
+
+.download-form #submit {
     background: #AA4F39;
     color: #fff;
     text-transform: uppercase;
@@ -681,11 +683,12 @@ h1, h1 a {
     font-weight: bold;
     height: 62px;
     margin-top: 20px;
-} #download .download-form #submit:hover {
+} .download-form #submit:hover {
     background: #802915;
 }
 
-#download h5 {
+
+#download h5, #error h5 {
   line-height: 1.5em;
   text-align: center;
   margin-bottom: 30px;

@@ -1,0 +1,23 @@
+extends base
+block content
+  div.section.download
+    div.section-title
+      if success == "true"
+        h5 We have received your report and will look into it shortly! Thank you!
+          br
+          a(href="/") Back Home
+      else 
+        h5 Thank you for reporting issues with the dataset!
+          br
+          | Given the size and scope of this dataset, we appreciate all types of help.
+          br
+          |If you would like to get more involved, please&nbsp;
+          a(href="mailto:claire.bowern@yale.edu") get in touch
+        div.section-form.download-form
+          form(action="https://formspree.io/anayar2@gmail.com", method="POST")
+            input(type="text", name="name", placeholder="Full Name")
+            input(type="text", name="_replyto", placeholder="E-Mail Address")
+            textarea(type="text", placeholder="Message", name="message")
+            input(type="hidden", name="_next", value="/error/success")
+            input(type="hidden", name="_subject", value= "ChirilaDB Error Report | Word: " + errorWord)
+            input(type="submit", value="Submit", id="submit")

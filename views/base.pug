@@ -67,6 +67,9 @@ html
     if mapScripts == true
       script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=" + gMapKey + "&&callback=initMap")
       script(type="text/javascript", src="/js/mapping.js")
+    if subMapScripts == true
+      script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=" + gMapKey + "&&callback=initSubMap")
+      script(type="text/javascript", src="/js/subMap.js")
   //Jade Stuff
   mixin space()
     | !{' '}

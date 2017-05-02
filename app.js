@@ -28,7 +28,8 @@ app.get('/', function(req, res) {
     pageHeaderTitle: 'Welcome to Chirila DB',
     pageHeaderSubtitle: 'A database of the language of Australia',
     indexFAQ: indexFAQ,
-    mapScripts: false
+    mapScripts: false,
+    subMapScripts: false
   })
 })
 
@@ -42,7 +43,8 @@ app.get('/index', function(req, res) {
     pageHeaderTitle: 'Welcome to Chirila DB',
     pageHeaderSubtitle: 'A database of the language of Australia',
     indexFAQ: indexFAQ,
-    mapScripts: false
+    mapScripts: false,
+    subMapScripts: false
   })
 })
 
@@ -58,7 +60,8 @@ app.get('/languages', function(req, res) {
     headerInfo: headers,
     data: myData,
     gMapKey: _gmapKey,
-    mapScripts: true    
+    mapScripts: true, 
+    subMapScripts: false
   })
 });
 
@@ -81,7 +84,8 @@ app.get('/languages/:language', function(req, res) {
     pageHeaderSubtitle: langWords[0].Subgroup + " | " + langWords[0].Family,
     data: langWords,
     gMapKey: _gmapKey,
-    mapScripts: true   
+    mapScripts: false,
+    subMapScripts: true
   })
 });
 
@@ -96,7 +100,8 @@ app.get('/words', function(req, res) {
     pageHeaderSubtitle: 'View all words in the dataset',
     headerInfo: headers,
     data: myData,
-    mapScripts: false    
+    mapScripts: false,
+    subMapScripts: false
   })
 });
 
@@ -111,7 +116,8 @@ app.get('/reconstructions', function(req, res) {
     pageHeaderSubtitle: 'View all reconstructions in the dataset',
     headerInfo: headers,
     data: myData,
-    mapScripts: false    
+    mapScripts: false,
+    subMapScripts: false
   })
 });
 
@@ -122,26 +128,40 @@ app.get('/download', function(req, res) {
     headerBG: 'downloadHeader',
     pageHeaderTitle: 'Download',
     pageHeaderSubtitle: 'Download the complete Chirila Dataset',
-    mapScripts: false    
+    mapScripts: false,
+    subMapScripts: false
   })
 });
 
-app.get('/downloadSuccess', function(req, res) {
-  var file = 'FullChirilaDataset.csv';
-  
-  /*
-  if (req.params.downloadAuth == "verified") {
-    res.download(file);
-  }
-  */
-  
+app.get('/downloadSuccess', function(req, res) {  
   res.render("downloadSuccess", {
     pageTitle: 'Download Success | Chirila DB',
     pageId: 'downloadSuccess',
     headerBG: 'downloadHeader',
     pageHeaderTitle: 'Download Success',
     pageHeaderSubtitle: 'You may now download the complete Chirila Dataset',
-    mapScripts: false    
+    mapScripts: false, 
+    subMapScripts: false
+  })
+});
+
+app.get('/error/:word', function(req, res) {
+  var errorWord = req.params.word;  
+  var success = "false";
+  if (errorWord == "success") {
+    success = "true";
+  }
+  
+  res.render("error", {
+    pageTitle: 'Error Report | Chirila DB',
+    pageId: 'error',
+    headerBG: 'downloadHeader',
+    pageHeaderTitle: 'Error Report',
+    pageHeaderSubtitle: 'Report errors in the dataset here.',
+    mapScripts: false,
+    subMapScripts: false,
+    success: success,
+    errorWord: errorWord
   })
 });
 

@@ -67,10 +67,11 @@ block content
               td.gloss= item.Std_Gloss
               td.source= item.Author
               td.error
-                a(href= "error/" + item.OriginalForm) Report
-  script(src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js" type="text/javascript")
+                a(href= "../error/" + item.OriginalForm) Report
+  script(src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js" type="text/javascript")  
   script(type="text/javascript").
     $(document).ready(function(){
+      //Sort table
       function setTableSort() {
            var options = {
               valueNames: [ 'word', 'phonetic-form', 'gloss' ]
@@ -78,6 +79,12 @@ block content
           var userList = new List('lang-word-table', options);
       }
       setTableSort();
+      
+      //Map the language
+      var item = !{JSON.stringify(data[0]).replace(/<\//g, '<\\/')};
+      setTimeout(function(){
+        langSubpageMap(item);
+      }, 10);      
     });
                 
             
