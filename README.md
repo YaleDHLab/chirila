@@ -1,11 +1,8 @@
-## Chirila Node Application
+## Built With
 
-To run:
-'''
-git clone https://github.com/abhinayar/ChirilaNode
-npm install
-node app
-'''
+* git clone https://github.com/abhinayar/ChirilaNode
+* cd ChirilaNode
+* npm install
+* node app
 
-Navigate to http://localhost:8080
-Report any problems to me @abhinayar
+Report any issues to @abhinayar
