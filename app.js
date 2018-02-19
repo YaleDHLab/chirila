@@ -1,5 +1,5 @@
 //API Keys
-var _gmapKey = "AIzaSyBq_JAExTxvT_Tin75QXSkEdoEtkxzYruM";
+var _gmapKey = 'AIzaSyBq_JAExTxvT_Tin75QXSkEdoEtkxzYruM';
 
 //NodeJS Boilerplate
 var express = require('express'),
@@ -15,13 +15,13 @@ app.set('views', path.join(__dirname, 'views'));
 //Set where public files are
 app.use(express.static(__dirname + '/public'));
 //Jade templating language
-app.set("view engine", "pug")
+app.set('view engine', 'pug')
 
 //Express routing
 app.get('/', function(req, res) {
   var indexFAQ = require(__dirname + '/public/json/index_faq.json');
   
-  res.render("index", {
+  res.render('index', {
     pageTitle: 'Home | Chirila DB',
     pageId: 'index',
     headerBG: 'indexHeader',
@@ -36,7 +36,7 @@ app.get('/', function(req, res) {
 app.get('/index', function(req, res) {
   var indexFAQ = require(__dirname + '/public/json/index_faq.json');
   
-  res.render("index", {
+  res.render('index', {
     pageTitle: 'Home | Chirila DB',
     pageId: 'index',
     headerBG: 'indexHeader',
@@ -49,9 +49,9 @@ app.get('/index', function(req, res) {
 })
 
 app.get('/languages', function(req, res) {
-  var headers = ["Language", "Subgroup", "Family", "ISOCode", "Glottocode", "AIATSIS Code", "Variety"];
+  var headers = ['Language', 'Subgroup', 'Family', 'ISOCode', 'Glottocode', 'AIATSIS Code', 'Variety'];
   
-  res.render("languages", {
+  res.render('languages', {
     pageTitle: 'Languages | Chirila DB',
     pageId: 'languages',
     headerBG: 'languageHeader',
@@ -76,12 +76,12 @@ app.get('/languages/:language', function(req, res) {
     }
   }
 
-  res.render("language_sub", {
+  res.render('language_sub', {
     pageTitle: lang + ' | Chirila DB',
     pageId: 'languages-sub',
     headerBG: 'languageSubHeader',
     pageHeaderTitle: lang,
-    pageHeaderSubtitle: langWords[0].Subgroup + " | " + langWords[0].Family,
+    pageHeaderSubtitle: langWords[0].Subgroup + ' | ' + langWords[0].Family,
     data: langWords,
     gMapKey: _gmapKey,
     mapScripts: false,
@@ -90,9 +90,9 @@ app.get('/languages/:language', function(req, res) {
 });
 
 app.get('/words', function(req, res) {
-  var headers = ["Word", "Phonetic Form", "Og. Gloss", "Language Name", "PoS", "Source"];
+  var headers = ['Word', 'Phonetic Form', 'Og. Gloss', 'Language Name', 'PoS', 'Source'];
   
-  res.render("words", {
+  res.render('words', {
     pageTitle: 'Words | Chirila DB',
     pageId: 'words',
     headerBG: 'wordsHeader',
@@ -106,9 +106,9 @@ app.get('/words', function(req, res) {
 });
 
 app.get('/reconstructions', function(req, res) {
-  var headers = ["Form", "Level", "Gloss", "Notes"];
+  var headers = ['Form', 'Level', 'Gloss', 'Notes'];
   
-  res.render("reconstructions", {
+  res.render('reconstructions', {
     pageTitle: 'Reconstructions | Chirila DB',
     pageId: 'reconstructions',
     headerBG: 'reconstructionsHeader',
@@ -122,7 +122,7 @@ app.get('/reconstructions', function(req, res) {
 });
 
 app.get('/download', function(req, res) {
-  res.render("download", {
+  res.render('download', {
     pageTitle: 'Download | Chirila DB',
     pageId: 'download',
     headerBG: 'downloadHeader',
@@ -134,7 +134,7 @@ app.get('/download', function(req, res) {
 });
 
 app.get('/downloadSuccess', function(req, res) {  
-  res.render("downloadSuccess", {
+  res.render('downloadSuccess', {
     pageTitle: 'Download Success | Chirila DB',
     pageId: 'downloadSuccess',
     headerBG: 'downloadHeader',
@@ -147,12 +147,12 @@ app.get('/downloadSuccess', function(req, res) {
 
 app.get('/error/:word', function(req, res) {
   var errorWord = req.params.word;  
-  var success = "false";
-  if (errorWord == "success") {
-    success = "true";
+  var success = 'false';
+  if (errorWord == 'success') {
+    success = 'true';
   }
   
-  res.render("error", {
+  res.render('error', {
     pageTitle: 'Error Report | Chirila DB',
     pageId: 'error',
     headerBG: 'downloadHeader',
@@ -173,22 +173,19 @@ app.listen(8080, function(){
 //This will hold all our data
 var myData = [];
 //Path to CSV file
-var csvFilePath = __dirname + '/data/smallDataSetCleansed.csv';
+var csvFilePath = __dirname + '/data/chirila.csv';
 //Converter for csvToJson
 const converter=csv({
   noheader: false,
   trim: true,
-  delimiter: ",",
+  delimiter: ',',
   workerNum: 4,
 })
 
 csv().fromFile(csvFilePath).on('json', (json, rowIndex)=> {
   myData.push(json);
 }).on('error', (err)=> {
-  console.log("error", err);
+  console.log('error', err);
 }).on('end', ()=> { 
-  //console.log(myData);
+
 });
-
-
-
