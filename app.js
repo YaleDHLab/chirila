@@ -25,8 +25,8 @@ app.get('/', function(req, res) {
     pageTitle: 'Home | Chirila DB',
     pageId: 'index',
     headerBG: 'indexHeader',
-    pageHeaderTitle: 'Welcome to Chirila DB',
-    pageHeaderSubtitle: 'A database of the language of Australia',
+    pageHeaderTitle: 'Welcome to Chirila',
+    pageHeaderSubtitle: 'A database of the languages of Australia',
     indexFAQ: indexFAQ,
     mapScripts: false,
     subMapScripts: false
@@ -40,8 +40,8 @@ app.get('/index', function(req, res) {
     pageTitle: 'Home | Chirila DB',
     pageId: 'index',
     headerBG: 'indexHeader',
-    pageHeaderTitle: 'Welcome to Chirila DB',
-    pageHeaderSubtitle: 'A database of the language of Australia',
+    pageHeaderTitle: 'Welcome to Chirila',
+    pageHeaderSubtitle: 'A database of the languages of Australia',
     indexFAQ: indexFAQ,
     mapScripts: false,
     subMapScripts: false
@@ -90,7 +90,7 @@ app.get('/languages/:language', function(req, res) {
 });
 
 app.get('/words', function(req, res) {
-  var headers = ['Word', 'Phonetic Form', 'Og. Gloss', 'Language Name', 'PoS', 'Source'];
+  var headers = ['Word', 'Phonetic Form', 'Orig. Gloss', 'Language Name', 'PoS', 'Source'];
   
   res.render('words', {
     pageTitle: 'Words | Chirila DB',
