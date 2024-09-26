@@ -25,7 +25,7 @@
   },
   "6": {
     "question": "How do I cite Chirila?",
-    "answer": "Citing Chirila data involves citing both the database and the sources underlying the database. To cite Chirila in academic publications, please cite the paper that describes the database:<br\/><br\/>Bowern, Claire (2016). Chirila: Contemporary and Historical Resources for the Indigenous Languages of Australia. <em>Language Documentation and Conservation. <\/em>Vol 10<em>. <\/em><a href="http://hdl.handle.net/10125/24685">http:\/\/nflrc.hawaii.edu\/ldc\/</a><br\/><br\/> You can also reference the database itself: <i>Chirila</i>, version 2.0, February, 2018.<br\/><br\/>To cite the underlying database sources, please use the shortcode key field in the database to reference the data in that source."
+    "answer": "Citing Chirila data involves citing both the database and the sources underlying the database. To cite Chirila in academic publications, please cite the paper that describes the database:<br\/><br\/>Bowern, Claire (2016). Chirila: Contemporary and Historical Resources for the Indigenous Languages of Australia. <em>Language Documentation and Conservation. <\/em>Vol 10<em>. <\/em><a href=\"http://hdl.handle.net/10125/24685\">http:\/\/nflrc.hawaii.edu\/ldc\/</a><br\/><br\/> You can also reference the database itself: <i>Chirila</i>, version 2.0, February, 2018.<br\/><br\/>To cite the underlying database sources, please use the shortcode key field in the database to reference the data in that source."
   },
   "7": {
     "question": "Contributing to CHIRILA",
